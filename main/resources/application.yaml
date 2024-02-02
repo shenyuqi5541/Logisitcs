@@ -1,0 +1,31 @@
+server:
+  port: 8088
+spring:
+  mail:
+    host: smtp.163.com
+    protocol: smtp
+    default-encoding: UTF-8
+    #发件人
+    username: shenyuqi0701@163.com
+    #授权码
+    password: OCYDXUQLHQTXBMAS
+    properties:
+      mail:
+        debug: true
+        smtp:
+          ssl:
+            enable: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/intelligent_logistics?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+#设置日志级别会给root根节点设置，代表整体应用的级别
+logging:
+  level:
+    root: info
